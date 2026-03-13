@@ -1,1 +1,3 @@
 # Livros_Projeto2026
+O SenaiStock é uma API de Back-End desenvolvida para solucionar o problema de falta de controle no estoque de livros didáticos das unidades do Senai. Atualmente, o almoxarifado recebe grandes remessas de livros periodicamente, porém não possui um sistema eficiente para rastrear as saídas, o que frequentemente resulta no esgotamento de títulos importantes no momento em que uma turma necessita deles, gerando atrasos no processo de aprendizado.
+Desenvolver um sistema Back-End que mantenha o saldo do estoque de livros sempre atualizado, registrando entradas (recebimento de remessas) e saídas (retirada para turmas), garantindo que o almoxarifado tenha visibilidade em tempo real da quantidade disponível de cada título.
