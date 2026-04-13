@@ -383,10 +383,8 @@ Os protótipos foram criados no **Figma** e cobrem todas as telas principais do 
 
 <div align="center">
 
-**⭐ Se esse projeto te ajudou, deixa uma estrela!**
-
 <br/>
 
-<sub>Feito com 💙 por Viviane e Vitória · SENAI SP · 2026</sub>
+<sub>Feito por Viviane e Vitória · SENAI SP · 2026</sub>
 
 </div>
