@@ -40,7 +40,7 @@
 ## 📌 Índice
 
 - [O Problema](#-o-problema)
-- [A Solução](#-a-solução)
+- [A Solução](#-solução)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias](#-tecnologias)
 - [Arquitetura](#-arquitetura)
