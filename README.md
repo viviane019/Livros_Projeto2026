@@ -40,10 +40,9 @@
 ## 📌 Índice
 
 - [O Problema](#-o-problema)
-- [A Solução](#-solução)
+- [Solução](#-solução)
 - [Funcionalidades](#-funcionalidades)
 - [Tecnologias](#-tecnologias)
-- [Arquitetura](#-arquitetura)
 - [Como Rodar](#-como-rodar)
 - [Endpoints](#-endpoints)
 - [Requisitos do Sistema](#-requisitos-do-sistema)
@@ -149,10 +148,6 @@ O **SenaiStock** centraliza e automatiza o controle de estoque, oferecendo:
       <sub><b>MySQL 8</b></sub>
     </td>
     <td align="center" width="100">
-      <img src="https://skillicons.dev/icons?i=postman" width="48" height="48" alt="Postman"/><br/>
-      <sub><b>Postman</b></sub>
-    </td>
-    <td align="center" width="100">
       <img src="https://skillicons.dev/icons?i=figma" width="48" height="48" alt="Figma"/><br/>
       <sub><b>Figma</b></sub>
     </td>
@@ -169,32 +164,6 @@ O **SenaiStock** centraliza e automatiza o controle de estoque, oferecendo:
 - 🔒 **Hash Bcrypt** — senhas criptografadas com segurança
 - 🌐 **RESTful + JSON** — padrão de comunicação moderno e universal
 - 📐 **PSR + Clean Code** — código legível, organizado e fácil de manter
-
----
-
-## 🏛️ Arquitetura
-
-```
-senaistock/
-├── app/
-│   ├── Http/
-│   │   ├── Controllers/
-│   │   │   ├── AuthController.php
-│   │   │   ├── LivroController.php
-│   │   │   └── EstoqueController.php
-│   │   └── Middleware/
-│   ├── Models/
-│   │   ├── User.php
-│   │   ├── Livro.php
-│   │   └── Movimentacao.php
-│   └── Services/
-│       └── EstoqueService.php
-├── database/
-│   └── migrations/
-├── routes/
-│   └── api.php
-└── tests/
-```
 
 ---
 
