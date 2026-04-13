@@ -1,1 +1,162 @@
 https://trello.com/invite/b/6998908cb1d07a8306e2992c/ATTI81db31cab42ba3e947767e065db6b8c34D23F75D/controle-de-estoque-de-livros-didaticos-senai
+
+# 📚 Controle de Estoque de Livros Didáticos — Senai
+
+> Sistema desenvolvido para gerenciamento e controle de estoque de livros didáticos do Senai, utilizando metodologia ágil com sprints quinzenais.
+
+---
+
+## 🗂️ Quadro de Sprints
+
+<!--
+  Visualização do quadro Trello em HTML.
+  Renderiza corretamente em navegadores e no GitHub Pages.
+  Para visualizar no GitHub, acesse: https://pages.github.com
+-->
+
+<div align="left">
+
+<table>
+<tr>
+<td valign="top" width="175" style="background:#f1f2f4; border-radius:10px; padding:10px;">
+
+**Sprint 1**
+`20/02 e 25/02`
+
+---
+
+🟪 ✅ Anotações do dia
+
+🔲 ✅ Metodologia Ágeis
+
+🔲 ✅ Versionamento
+
+</td>
+<td valign="top" width="175" style="background:#f1f2f4; border-radius:10px; padding:10px;">
+
+**02/03**
+
+---
+
+🟪 ✅ Anotação do dia
+
+🔲 ✅ Levantamento de Requisitos
+
+</td>
+<td valign="top" width="175" style="background:#f1f2f4; border-radius:10px; padding:10px;">
+
+**Sprint 2**
+`13/03 e 18/03`
+
+---
+
+🟪 ✅ Anotações do dia
+
+🟩 ⬜ Figma / Design
+
+🟪 ✅ Documentação
+
+🔲 ✅ Diagrama de Classe, Sequência
+
+🔲 ✅ Prototipagem
+
+</td>
+<td valign="top" width="175" style="background:#f1f2f4; border-radius:10px; padding:10px;">
+
+**Sprint 3**
+`01/04 e 10/04`
+
+---
+
+🟪 ✅ Anotação do dia
+
+🟪 ✅ Documentação
+
+🟪 ✅ Diagrama de Classe de Uso
+
+🟥 ⬜ Diagrama de Banco de Dados
+
+🟧 ⬜ Figma
+
+</td>
+<td valign="top" width="175" style="background:#f1f2f4; border-radius:10px; padding:10px;">
+
+**Sprint 4**
+`29/04 e 08/05`
+
+---
+
+*Aguardando cartões...*
+
+</td>
+<td valign="top" width="175" style="background:#f1f2f4; border-radius:10px; padding:10px;">
+
+**Sprint 5**
+`27/05 e 29/05`
+
+---
+
+*Aguardando cartões...*
+
+</td>
+<td valign="top" width="175" style="background:#f1f2f4; border-radius:10px; padding:10px;">
+
+**Sprint 6**
+`12/06 e 17/06`
+
+---
+
+*Aguardando cartões...*
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+## 🏷️ Legenda
+
+| Cor | Categoria |
+|-----|-----------|
+| 🟪 Rosa/Roxo | Anotações / Entrega |
+| 🟩 Verde | Design / UX |
+| 🟧 Amarelo | Em progresso |
+| 🟥 Vermelho | Pendente crítico |
+| 🔲 Cinza | Documentação / Outros |
+| ✅ | Concluído |
+| ⬜ | Em aberto |
+
+---
+
+## 👥 Equipe
+
+| Membro | Inicial |
+|--------|---------|
+| BM | 🔵 Dev 1 |
+| BM | 🔵 Dev 2 |
+| W  | 🟣 Dev 3 |
+
+---
+
+## 🛠️ Tecnologias
+
+> *(Adicione aqui as tecnologias utilizadas no projeto)*
+
+- Linguagem: `—`
+- Banco de dados: `—`
+- Framework: `—`
+- Prototipagem: **Figma**
+- Metodologia: **Scrum / Ágil**
+- Versionamento: **Git + GitHub**
+
+---
+
+## 📋 Sobre o Projeto
+
+Este projeto tem como objetivo desenvolver um sistema para controle e gestão de estoque de livros didáticos para o Senai, abrangendo desde o levantamento de requisitos até a entrega final, organizados em 6 sprints.
+
+---
+
+<sub>Projeto desenvolvido como atividade do Senai • Quadro gerenciado no Trello</sub>
