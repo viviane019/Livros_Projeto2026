@@ -1,9 +1,4 @@
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=E63946&center=true&vCenter=true&width=600&lines=📚+SENAI+S'TOCKS;Gestão+de+Estoque+Inteligente" alt="Typing SVG" />
-
-<br/>
-
 <p align="center">
   <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=for-the-badge&labelColor=1a1a2e" />
   <img src="https://img.shields.io/badge/versão-1.0.0-E63946?style=for-the-badge&labelColor=1a1a2e" />
@@ -20,7 +15,7 @@
 
 <br/>
 
-> **SenaiStock** é uma API Back-End RESTful desenvolvida para solucionar o problema de falta de controle no estoque de livros didáticos das unidades do SENAI — garantindo visibilidade em tempo real das entradas, saídas e saldo disponível de cada título.
+> **SenaiStock** é uma API Back-End desenvolvida para solucionar o problema de falta de controle no estoque de livros didáticos das unidades do SENAI — garantindo visibilidade em tempo real das entradas, saídas e saldo disponível de cada título.
 
 <br/>
 
