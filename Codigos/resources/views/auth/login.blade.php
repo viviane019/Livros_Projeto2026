@@ -26,8 +26,10 @@
 
         .card-image {
             width: 45%;
-            background-color: #c8102e;
             min-height: 420px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .card-form {
@@ -39,6 +41,12 @@
         .logo {
             text-align: center;
             margin-bottom: 6px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
         }
 
         .logo h1 {
@@ -119,11 +127,12 @@
 <body>
 
 <div class="card">
-    <div class="card-image"></div>
+
+    <div class="card-image" style="background-image: url('{{ asset('Imagens/loginsenai.png') }}');"></div>
 
     <div class="card-form">
         <div class="logo">
-            <h1>🗂 SenaiStock</h1>
+            <h1>SenaiStock</h1>
             <p>Controle de Estoque da Biblioteca</p>
         </div>
 
