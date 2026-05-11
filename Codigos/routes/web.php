@@ -1,16 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\CadastroController;
 use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+// Cadastro
+Route::get('/cadastro', [CadastroController::class, 'show'])->name('cadastro');
+Route::post('/cadastro', [CadastroController::class, 'store'])->name('cadastro.store');
 
+// Login
 Route::get('/login', [LoginController::class, 'show'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
+// Logout
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Login - SenaiStock</title>
+    <title>Cadastro - SenaiStock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,7 +26,7 @@
 
         .card-image {
             width: 45%;
-            min-height: 420px;
+            min-height: 500px;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -83,17 +83,6 @@
             margin-top: 4px;
         }
 
-        .options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            margin-bottom: 18px;
-            color: #555;
-        }
-
-        .options a { color: #e63946; text-decoration: none; }
-
         .btn-login {
             width: 100%;
             padding: 11px;
@@ -114,6 +103,25 @@
             margin-top: 16px;
             color: #555;
         }
+         /* Aplica a cor vermelha no preenchimento do checkbox */
+    #checkTermos {
+        accent-color: red;
+        /* Opcional: aumenta um pouco o tamanho para facilitar o clique */
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+    }
+
+    /* Opcional: estiliza os links para combinarem com o tema */
+    label[for="checkTermos"] a {
+        color: red;
+        text-decoration: none;
+    }
+    
+    label[for="checkTermos"] a:hover {
+        text-decoration: underline;
+    }
+
 
         .register a { color: #e63946; text-decoration: none; }
     </style>
@@ -122,7 +130,7 @@
 
 <div class="card">
 
-    <div class="card-image" style="background-image: url('{{ asset('Imagens/logosenai.png') }}');"></div>
+    <div class="card-image" style="background-image: url('{{ asset('Imagens/telacadastro.jpg') }}');"></div>
 
     <div class="card-form">
         <div class="logo">
@@ -130,8 +138,22 @@
             <p>Controle de Estoque da Biblioteca</p>
         </div>
 
-        <form method="POST" action="{{ route('login.post') }}">
+        <form method="POST" action="{{ route('cadastro.store') }}">
             @csrf
+
+            <div class="form-group">
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Nome completo"
+                    value="{{ old('name') }}"
+                    class="{{ $errors->has('name') ? 'is-invalid' : '' }}"
+                    required
+                >
+                @error('name')
+                    <div class="error-msg">{{ $message }}</div>
+                @enderror
+            </div>
 
             <div class="form-group">
                 <input
@@ -160,19 +182,26 @@
                 @enderror
             </div>
 
-            <div class="options">
-                <label>
-                    <input type="checkbox" name="remember"> Lembrar-me
-                </label>
-                <a href="#">Esqueceu a senha?</a>
+            <div class="form-group">
+                <input
+                    type="password"
+                    name="password_confirmation"
+                    placeholder="Confirmar senha"
+                    required
+                >
             </div>
 
-            <button type="submit" class="btn-login">Entrar</button>
+            <div class="form-group" style="margin-bottom: 18px;">
+                <input type="checkbox" id="checkTermos" onchange="document.getElementById('btnEnviar').disabled = !this.checked;">
+                <label for="checkTermos" style="font-size: 12px; color: #555;">Concordo com os <a href="termos-de-servico.html" target="_blank" style="color: #e63946; text-decoration: none;">Termos de Serviço</a> e a <a href="politica-de-privacidade.html" target="_blank" style="color: #e63946; text-decoration: none;">Política de Privacidade</a></label>
+            </div>
+
+            <button type="submit" class="btn-login" id="btnEnviar" disabled>Cadastrar</button>
 
         </form>
 
         <div class="register">
-            Não tem uma conta? <a href="{{ route('cadastro') }}">Cadastre-se</a>
+            Já tem uma conta? <a href="{{ route('login') }}">Faça login</a>
         </div>
     </div>
 </div>
