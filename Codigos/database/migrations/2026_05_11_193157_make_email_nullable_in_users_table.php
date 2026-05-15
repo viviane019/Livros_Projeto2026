@@ -3,25 +3,26 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-//isso adiciona o campo nr na tabela users para que seja possível o cadastro e login usando o nr ao invés do email
+
 return new class extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::table('{{ table }}', function (Blueprint $table) {
-            //
-        });
-    }
+{
+    Schema::table('users', function (Blueprint $table) {
+        $table->string('email')->nullable()->change();
+        $table->string('email_verified_at')->nullable()->change();
+    });
+}
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('{{ table }}', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }

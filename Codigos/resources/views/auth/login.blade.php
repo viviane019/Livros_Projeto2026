@@ -44,15 +44,9 @@
         }
 
         .logo img {
-            width: 100px;
+            width: 150px;
             height: auto;
             margin-bottom: 10px;
-        }
-
-        .logo h1 {
-            font-size: 22px;
-            color: #e63946;
-            font-weight: 700;
         }
 
         .logo p {
@@ -128,15 +122,15 @@
 
 <div class="card">
 
-    <div class="card-image" style="background-image: url('{{ asset('Imagens/loginsenai.png') }}');"></div>
+    <div class="card-image" style="background-image: url('{{ asset('Imagens/logosenai.png') }}');"></div>
 
     <div class="card-form">
         <div class="logo">
-            <h1>SenaiStock</h1>
+            <img src="{{ asset('Imagens/logo.png') }}">
             <p>Controle de Estoque da Biblioteca</p>
         </div>
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login.post') }}">
             @csrf
 
             <div class="form-group">
@@ -158,8 +152,12 @@
                     type="password"
                     name="password"
                     placeholder="Senha"
+                    class="{{ $errors->has('password') ? 'is-invalid' : '' }}"
                     required
                 >
+                @error('password')
+                    <div class="error-msg">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="options">
@@ -170,11 +168,11 @@
             </div>
 
             <button type="submit" class="btn-login">Entrar</button>
-            
+
         </form>
 
         <div class="register">
-            Não tem uma conta? <a href="#">Cadastre-se</a>
+            Não tem uma conta? <a href="{{ route('cadastro') }}">Cadastre-se</a>
         </div>
     </div>
 </div>
