@@ -14,3 +14,12 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 
 // Logout
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+//dashboard
+Route::get('/dashboard', function () { return view('dashboard'); })->middleware('auth')->name('dashboard');
+
+// estoque
+Route::get('/estoque', function () { return view('estoque'); })->middleware('auth')->name('estoque');
+
+
+
