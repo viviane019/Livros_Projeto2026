@@ -1,27 +1,25 @@
 <?php
 
-namespace App\Filament\Resources\EstoqueResource\Tables;
+namespace App\Filament\Resources\Estoques\Tables;
 
-use Filament\Tables\Table;
+use App\Models\Estoque;
 use Filament\Tables;
+use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Actions\ActionGroup;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\ViewAction;
-use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Table;
 
 class EstoquesTable
 {
     public static function table(Table $table): Table
     {
         return $table
-            // ── COLUNAS ──────────────────────────────────────────
             ->columns([
-
-                // Capa
                 ImageColumn::make('capa')
                     ->label('Capa')
                     ->height(50)
@@ -29,7 +27,6 @@ class EstoquesTable
                     ->defaultImageUrl(asset('images/book-placeholder.png'))
                     ->rounded(),
 
-                // Título + Autor
                 TextColumn::make('titulo')
                     ->label('Título (Autor)')
                     ->description(fn ($record) => $record->autor ?? '—')
@@ -38,7 +35,6 @@ class EstoquesTable
                     ->weight(\Filament\Support\Enums\FontWeight::Medium)
                     ->wrap(),
 
-                // ISBN
                 TextColumn::make('isbn')
                     ->label('ISBN-13')
                     ->searchable()
@@ -46,7 +42,6 @@ class EstoquesTable
                     ->copyMessage('ISBN copiado!')
                     ->color('gray'),
 
-                // Categoria
                 TextColumn::make('categoria')
                     ->label('Categoria')
                     ->badge()
@@ -54,13 +49,11 @@ class EstoquesTable
                     ->searchable()
                     ->sortable(),
 
-                // Preço
                 TextColumn::make('preco')
                     ->label('Preço')
                     ->money('BRL')
                     ->sortable(),
 
-                // Quantidade
                 TextColumn::make('quantidade')
                     ->label('Qtd. Atual')
                     ->suffix(' unid.')
@@ -73,7 +66,6 @@ class EstoquesTable
                     })
                     ->weight(\Filament\Support\Enums\FontWeight::Bold),
 
-                // Status
                 TextColumn::make('status')
                     ->label('Status')
                     ->badge()
@@ -93,18 +85,15 @@ class EstoquesTable
                     })
                     ->sortable(),
 
-                // Localização
                 TextColumn::make('local')
                     ->label('Local')
                     ->searchable()
                     ->sortable(),
             ])
-
-            // ── FILTROS ──────────────────────────────────────────
             ->filters([
                 SelectFilter::make('categoria')
                     ->label('Categoria')
-                    ->options(\App\Models\Estoque::categorias())
+                    ->options(Estoque::categorias())
                     ->searchable(),
 
                 SelectFilter::make('status')
@@ -119,7 +108,7 @@ class EstoquesTable
                 SelectFilter::make('local')
                     ->label('Localização / Depósito')
                     ->options(fn () =>
-                        \App\Models\Estoque::query()
+                        Estoque::query()
                             ->whereNotNull('local')
                             ->distinct()
                             ->pluck('local', 'local')
@@ -127,8 +116,6 @@ class EstoquesTable
                     ),
             ])
             ->filtersFormColumns(3)
-
-            // ── AÇÕES POR LINHA ──────────────────────────────────
             ->actions([
                 ActionGroup::make([
                     ViewAction::make()
@@ -142,16 +129,12 @@ class EstoquesTable
                         ->icon('heroicon-o-trash'),
                 ]),
             ])
-
-            // ── AÇÕES EM MASSA ───────────────────────────────────
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make()
                         ->label('Excluir selecionados'),
                 ]),
             ])
-
-            // ── CONFIGURAÇÕES ────────────────────────────────────
             ->defaultSort('titulo')
             ->striped()
             ->emptyStateIcon('heroicon-o-archive-box')

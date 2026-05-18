@@ -18,3 +18,7 @@ class Catalogo extends Model
         'descricao',
     ];
 }
+
+    //
+}
+

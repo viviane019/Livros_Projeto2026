@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Catalogos\Pages;
 
 use App\Filament\Resources\Catalogos\CatalogoResource;
 use Filament\Actions;
+use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
 class ListCatalogos extends ListRecords
@@ -18,3 +19,9 @@ class ListCatalogos extends ListRecords
         ];
     }
 }
+
+            CreateAction::make(),
+        ];
+    }
+}
+

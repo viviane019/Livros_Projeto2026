@@ -353,4 +353,3 @@ Os protótipos foram criados no **Figma** e cobrem todas as telas principais do 
 <sub>Feito por Viviane e Vitória · SENAI SP · 2026</sub>
 
 </div>
->>>>>>> b12d23d174759f5e4a6a6de29a08eadf8184e78f

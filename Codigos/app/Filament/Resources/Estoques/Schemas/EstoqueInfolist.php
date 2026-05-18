@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 
-namespace App\Filament\Resources\EstoqueResource\Schemas;
+namespace App\Filament\Resources\Estoques\Schemas;
 
+use Filament\Infolists\Components\Grid;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
-use Filament\Infolists\Components\Grid;
 use Filament\Infolists\Infolist;
 
 class EstoqueInfolist
@@ -13,8 +13,6 @@ class EstoqueInfolist
     public static function infolist(Infolist $infolist): Infolist
     {
         return $infolist->schema([
-
-            // ── Capa + Identificação ─────────────────────────────
             Section::make('Identificação')
                 ->icon('heroicon-o-book-open')
                 ->columns(3)
@@ -59,7 +57,6 @@ class EstoqueInfolist
                         ]),
                 ]),
 
-            // ── Estoque ──────────────────────────────────────────
             Section::make('Estoque e Localização')
                 ->icon('heroicon-o-archive-box')
                 ->columns(4)

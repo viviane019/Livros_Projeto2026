@@ -1,25 +1,23 @@
-<?php
+﻿<?php
 
-namespace App\Filament\Resources\EstoqueResource\Pages;
+namespace App\Filament\Resources\Estoques\Pages;
 
-use App\Filament\Resources\EstoqueResource\Tables\EstoqueResource;
+use App\Filament\Resources\Estoques\EstoqueResource;
 use App\Models\Estoque;
 use Filament\Actions\CreateAction;
-use Filament\Resources\Pages\ListRecords;
 use Filament\Resources\Components\Tab;
+use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Builder;
 
 class ListEstoques extends ListRecords
 {
     protected static string $resource = EstoqueResource::class;
 
-    // ── Título da página ──────────────────────────────────
     protected function getHeaderHeading(): ?string
     {
         return 'Estoque de Livros';
     }
 
-    // ── Botão "Novo Produto" no cabeçalho ─────────────────
     protected function getHeaderActions(): array
     {
         return [
@@ -29,7 +27,6 @@ class ListEstoques extends ListRecords
         ];
     }
 
-    // ── Abas de filtro rápido ─────────────────────────────
     public function getTabs(): array
     {
         return [

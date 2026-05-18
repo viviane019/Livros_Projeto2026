@@ -3,7 +3,11 @@
 namespace App\Filament\Resources\Catalogos\Pages;
 
 use App\Filament\Resources\Catalogos\CatalogoResource;
+
 use Filament\Actions;
+
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;
 
 class EditCatalogo extends EditRecord
@@ -13,6 +17,7 @@ class EditCatalogo extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+
             Actions\DeleteAction::make()
                 ->label('Excluir Livro'),
         ];
@@ -28,3 +33,10 @@ class EditCatalogo extends EditRecord
         return 'Livro atualizado com sucesso!';
     }
 }
+
+            ViewAction::make(),
+            DeleteAction::make(),
+        ];
+    }
+}
+

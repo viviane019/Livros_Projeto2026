@@ -11,6 +11,15 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Filament\Resources\Catalogos\Pages\ViewCatalogo;
+use App\Filament\Resources\Catalogos\Schemas\CatalogoForm;
+use App\Filament\Resources\Catalogos\Schemas\CatalogoInfolist;
+use App\Filament\Resources\Catalogos\Tables\CatalogosTable;
+use App\Models\Catalogo;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
 class CatalogoResource extends Resource
@@ -71,6 +80,18 @@ class CatalogoResource extends Resource
                 ])
                 ->columns(2),
         ]);
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static ?string $recordTitleAttribute = 'Catalogo';
+
+    public static function form(Schema $schema): Schema
+    {
+        return CatalogoForm::configure($schema);
+    }
+
+    public static function infolist(Schema $schema): Schema
+    {
+        return CatalogoInfolist::configure($schema);
     }
 
     public static function table(Table $table): Table
@@ -148,6 +169,14 @@ class CatalogoResource extends Resource
                 ]),
             ])
             ->defaultSort('created_at', 'desc');
+        return CatalogosTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
     }
 
     public static function getPages(): array
@@ -155,7 +184,15 @@ class CatalogoResource extends Resource
         return [
             'index'  => ListCatalogos::route('/'),
             'create' => CreateCatalogo::route('/create'),
+            'view' => ViewCatalogo::route('/{record}'),
             'edit'   => EditCatalogo::route('/{record}/edit'),
+        ];
+    }
+}
+            'index' => ListCatalogos::route('/'),
+            'create' => CreateCatalogo::route('/create'),
+            'view' => ViewCatalogo::route('/{record}'),
+            'edit' => EditCatalogo::route('/{record}/edit'),
         ];
     }
 }

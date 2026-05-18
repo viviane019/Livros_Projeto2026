@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Catalogos\Pages;
 
 use App\Filament\Resources\Catalogos\CatalogoResource;
 use Filament\Actions;
+use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
 
 class ViewCatalogo extends ViewRecord
@@ -13,6 +14,7 @@ class ViewCatalogo extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
+
             Actions\EditAction::make()
                 ->label('Editar Livro'),
             Actions\DeleteAction::make()
@@ -20,3 +22,9 @@ class ViewCatalogo extends ViewRecord
         ];
     }
 }
+
+            EditAction::make(),
+        ];
+    }
+}
+

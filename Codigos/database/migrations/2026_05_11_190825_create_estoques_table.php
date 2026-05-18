@@ -6,10 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+
+    /**
+     * Run the migrations.
+     */
+
     public function up(): void
     {
         Schema::create('estoques', function (Blueprint $table) {
             $table->id();
+
             $table->string('codigo')->unique();           // Ex: 00112
             $table->string('titulo');                     // Nome do livro/material
             $table->string('autor')->nullable();          // Autor
@@ -25,9 +31,15 @@ return new class extends Migration
             $table->string('local')->nullable();          // Estante A3, Depósito B...
             $table->string('fornecedor')->nullable();     // Nome do fornecedor
             $table->text('descricao')->nullable();        // Descrição
+
             $table->timestamps();
         });
     }
+
+
+    /**
+     * Reverse the migrations.
+     */
 
     public function down(): void
     {

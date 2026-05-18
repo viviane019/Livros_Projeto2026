@@ -1,23 +1,21 @@
-<?php
+﻿<?php
 
-namespace App\Filament\Resources\EstoqueResource\Pages;
+namespace App\Filament\Resources\Estoques\Pages;
 
-use App\Filament\Resources\EstoqueResource\Tables\EstoqueResource;
-use Filament\Actions\EditAction;
+use App\Filament\Resources\Estoques\EstoqueResource;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
 
 class ViewEstoque extends ViewRecord
 {
     protected static string $resource = EstoqueResource::class;
 
-    // ── Título da página ──────────────────────────────────
     protected function getHeaderHeading(): ?string
     {
         return $this->record->titulo;
     }
 
-    // ── Botões no cabeçalho ───────────────────────────────
     protected function getHeaderActions(): array
     {
         return [

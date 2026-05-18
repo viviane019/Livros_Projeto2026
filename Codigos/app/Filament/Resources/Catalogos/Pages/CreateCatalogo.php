@@ -19,3 +19,4 @@ class CreateCatalogo extends CreateRecord
         return 'Livro cadastrado com sucesso!';
     }
 }
+}

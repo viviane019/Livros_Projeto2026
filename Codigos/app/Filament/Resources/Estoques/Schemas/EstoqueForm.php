@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\EstoqueResource\Schemas;
+namespace App\Filament\Resources\Estoques\Schemas;
 
 use App\Models\Estoque;
 use Filament\Forms\Components\FileUpload;
@@ -16,8 +16,6 @@ class EstoqueForm
     public static function form(Form $form): Form
     {
         return $form->schema([
-
-            // ── SEÇÃO: Identificação ─────────────────────────────
             Section::make('Identificação do Livro / Material')
                 ->description('Informações básicas do item no estoque.')
                 ->icon('heroicon-o-book-open')
@@ -72,7 +70,6 @@ class EstoqueForm
                         ->columnSpanFull(),
                 ]),
 
-            // ── SEÇÃO: Estoque e Localização ─────────────────────
             Section::make('Estoque e Localização')
                 ->description('Controle de quantidade, preço e local de armazenamento.')
                 ->icon('heroicon-o-archive-box')
